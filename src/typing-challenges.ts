@@ -140,10 +140,6 @@ export const backlogQueue: unknown = [
   { id: "DOC-3", blocked: false, assignee: "Iryna" },
 ];
 
-/* 🧩 Challenge 15 — Types
- * Додай часові мітки до будь-якого типу. Не забудь про змінюваність полів.
- */
-export type WithTimestamp<TEntity> = unknown;
 
 /* 🧩 Challenge 16 — Functions
  * Фабрика логерів. Типізуй `makePrefix`, методи та повідомлення.
@@ -185,8 +181,3 @@ export const draftInvoice: unknown = {
  * Типізуй кортеж налаштувань: [назва, кількість спроб, активність].
  */
 export const editableTuple: unknown = ["autosave", 3, true];
-
-/* 🧩 Challenge 20 — Types
- * Опиши результат операції як об'єднання успіху або помилки.
- */
-export type Result<Success, Failure> = unknown;

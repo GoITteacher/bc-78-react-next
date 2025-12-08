@@ -59,3 +59,4 @@ export const totalPrice: string = basePrice + " UAH";
 
 
 
+

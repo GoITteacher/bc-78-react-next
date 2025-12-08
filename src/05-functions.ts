@@ -8,6 +8,37 @@
  * 4) Стрілкові функції vs декларації: як описувати типи.
  *
  */
+
+// function foo(x: number, y:number):string{
+//   return String(x) + String(y);
+// }
+
+// type SumFn = (x: number, y:number)=>number;
+
+// const foo: SumFn = (x,y)=>{
+//   return x+y;
+// }
+
+
+//!======================================================
+
+
+// document.body.addEventListener('click', handleClick)
+
+// type Handler = (e: any)=>void;
+
+// const handleClick: Handler = (e) =>{
+
+// }
+
+//!======================================================
+
+function foo(x:number | string = 0){
+  console.log(x);
+}
+
+foo(255)
+
 //!======================================================
 // сигнатури: задаємо типи параметрів і повернення; TS виводить їх з тіла, але явна анотація робить контракт явним.
 //!======================================================

@@ -1,0 +1,65 @@
+import { Cat } from "../../../types/cats";
+import CatItem from "./CatItem/CatItem";
+
+const cats: Cat[] = [
+  {
+    name: "Mr. Whiskerson",
+    phone: "+1-555-1234",
+    email: "whiskerson@catmail.com",
+    image: "https://cataas.com/cat/says/Hello",
+    taken: false,
+  },
+  {
+    name: "Sir Pounce-a-lot",
+    phone: "+1-555-5678",
+    email: "pouncealot@catmail.com",
+    image: "https://cataas.com/cat/says/Meow",
+    taken: true,
+  },
+  {
+    name: "Meowzilla",
+    phone: "+1-555-9012",
+    email: "meowzilla@catmail.com",
+    image: "https://cataas.com/cat/says/Roar",
+    taken: false,
+  },
+  {
+    name: "Fluffington III",
+    phone: "+1-555-3456",
+    email: "fluffington@catmail.com",
+    image: "https://cataas.com/cat/says/Purr",
+    taken: true,
+  },
+  {
+    name: "Captain Purr",
+    phone: "+1-555-7890",
+    email: "captainpurr@catmail.com",
+    image: "https://cataas.com/cat/says/Howdy",
+    taken: false,
+  },
+  {
+    name: "The Great Catsby",
+    phone: "+1-555-2345",
+    email: "gatsby@catmail.com",
+    image: "https://cataas.com/cat/says/Welcome",
+    taken: true,
+  },
+];
+
+const Cats = () => {
+  return (
+    <ul>
+      {cats.map((item, i) => {
+        return (
+          <li key={i}>
+            <CatItem catInfo={item} />
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
+export default Cats;
+
+//!======================================================

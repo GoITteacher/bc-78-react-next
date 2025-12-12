@@ -9,6 +9,8 @@ const CounterControllers = ({
   increment,
   decrement,
 }: CounterControllersProps) => {
+  const x = 10;
+
   return (
     <div className={css["counterControllers"]}>
       <button onClick={decrement}>Decrement</button>

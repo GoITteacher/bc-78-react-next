@@ -62,7 +62,7 @@ export default function App() {
 
       {isLoading && <p>Loading data...</p>}
       {isError && <p>There was an error!!!!!</p>}
-      {data && data.hits.length > 0 && <ArticleList items={data.hits} />}
+      {data && data?.hits?.length > 0 && <ArticleList items={data.hits} />}
       <hr />
 
       {/* <button onClick={() => setCount(count + 1)}>

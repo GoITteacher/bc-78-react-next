@@ -1,0 +1,15 @@
+.productList {
+  width: 100%;
+}
+
+.productList ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.productList li {
+  list-style: none;
+}

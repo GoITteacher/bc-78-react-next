@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 // import Timer from "./Timer";
 import Sidebar from "./Sidebar";
 import CharacterWidget from "./CharacterWidget";

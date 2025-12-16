@@ -4,17 +4,9 @@ import Sidebar from "./Sidebar";
 import CharacterWidget from "./CharacterWidget";
 
 export default function App() {
-  const [isOpen, setIsOpen] = useState(() => {
-    const savedStatus = localStorage.getItem("sidebar-status");
-    return savedStatus !== null ? JSON.parse(savedStatus) : false;
-  });
+  const [isOpen, setIsOpen] = useState(false);
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
-
-  useEffect(() => {
-    console.log("localStorage.setItem");
-    window.localStorage.setItem("sidebar-status", JSON.stringify(isOpen));
-  }, [isOpen]);
 
   return (
     <>

@@ -4,9 +4,39 @@
  * - Очистити інтервал при розмонтуванні компонента
  */
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Timer() {
   const [time, setTime] = useState(new Date());
-  return <p>{time.toLocaleTimeString()}</p>;
+
+  useEffect(() => {
+    console.log("Запустити інтервал");
+
+    const id = setInterval(() => {
+      setTime(new Date());
+      console.log("Hello", Date.now());
+    }, 1000);
+
+    return () => {
+      clearInterval(id);
+      console.log("Видалення інтервалу", id);
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log("Народження");
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      console.log("Помираємо");
+    };
+  }, []);
+
+  return (
+    <p>
+      <h1>Timer</h1>
+      {time.toLocaleTimeString()}
+    </p>
+  );
 }

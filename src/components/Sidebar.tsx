@@ -5,6 +5,7 @@
  * - Очистити слухач при розмонтуванні
  */
 
+import { useEffect } from "react";
 import css from "./Sidebar.module.css";
 
 interface SidebarProps {
@@ -12,6 +13,25 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ onClose }: SidebarProps) {
+  useEffect(() => {
+    console.log("Add listener");
+
+    const handleClose = (e) => {
+      console.log(e.code);
+
+      if (e.code === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleClose);
+
+    return () => {
+      console.log("Remove Listener");
+      window.removeEventListener("keydown", handleClose);
+    };
+  }, [onClose]);
+
   return (
     <div className={css.wrapper}>
       <div className={css.sidebar}>

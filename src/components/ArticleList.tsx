@@ -1,4 +1,7 @@
-import { type Article } from "../types/article";
+// import { type Article } from "../types/article";
+interface Article {
+  objectID: string;
+}
 
 interface ArticleListProps {
   items: Article[];

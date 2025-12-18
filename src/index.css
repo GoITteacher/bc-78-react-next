@@ -37,7 +37,8 @@ div {
 
 ul {
   display: flex;
-  flex-wrap: wrap;
+
+  flex-direction: column;
   border-radius: 10px;
   list-style-type: none;
 }

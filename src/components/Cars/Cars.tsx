@@ -7,7 +7,7 @@ import FormUpdateCar from "./FormUpdateCar/FormUpdateCar";
 const Cars = () => {
   return (
     <div className={css["container"]}>
-      <Flex justify="space-between">
+      <Flex justify="center">
         <FormCreateCar />
         <FormUpdateCar />
       </Flex>

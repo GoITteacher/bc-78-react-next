@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import css from "./TaskForm.module.css";
-import { addTask } from "../../services/taskService";
-import { NewTaskData } from "../../types/task";
+import { addTask } from "../../../services/taskService";
+import { NewTaskData } from "../../../types/task";
 
 interface TaskFormProps {
   onSuccess: () => void;

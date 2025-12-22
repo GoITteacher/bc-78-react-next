@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { deleteTask, updateTask } from "../../services/taskService";
-import type { Task, TaskUpdateData } from "../../types/task";
+import { deleteTask, updateTask } from "../../../services/taskService";
+import type { Task, TaskUpdateData } from "../../../types/task";
 import css from "./TaskList.module.css";
 
 interface TaskListProps {

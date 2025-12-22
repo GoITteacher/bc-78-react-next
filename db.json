@@ -1,0 +1,15 @@
+{
+  "cars": [
+    {
+      "id": "f668",
+      "model": "Tesla",
+      "price": 25000,
+      "year": 2020,
+      "color": "#000000",
+      "onSale": false,
+      "speed": 300
+    }
+  ],
+  "users": [],
+  "books": []
+}

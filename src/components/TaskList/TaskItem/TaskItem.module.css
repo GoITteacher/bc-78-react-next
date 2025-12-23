@@ -1,0 +1,92 @@
+.taskItem {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(27, 34, 48, 0.1);
+  background: linear-gradient(135deg, #ffffff 0%, #f7f8fb 100%);
+  box-shadow: 0 10px 18px rgba(23, 30, 43, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.taskItem:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 24px rgba(23, 30, 43, 0.1);
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1f2b;
+}
+
+.statusOpen,
+.statusDone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.statusOpen {
+  color: #1e3c72;
+  background: rgba(180, 202, 231, 0.6);
+}
+
+.statusDone {
+  color: #0f5132;
+  background: rgba(180, 232, 204, 0.8);
+}
+
+.label {
+  letter-spacing: 0.2px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.primary {
+  background: #192a3e;
+  color: #f8f6f3;
+  box-shadow: 0 6px 12px rgba(25, 42, 62, 0.2);
+}
+
+.primary:hover {
+  background: #24324a;
+}
+
+.danger {
+  background: #f06a5e;
+  color: #ffffff;
+  box-shadow: 0 6px 12px rgba(240, 106, 94, 0.25);
+}
+
+.danger:hover {
+  background: #e0584d;
+}

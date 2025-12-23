@@ -1,29 +1,31 @@
-import { useCreateTask } from "../../hooks/useCreateTask";
 import css from "./TaskForm.module.css";
+import { useState } from "react";
+import { useCreateTask } from "../../hooks/useCreateTask";
 
-interface TaskFormProps {
-  onSuccess: () => void;
-}
+const TaskForm = () => {
+  const [text, setText] = useState("");
+  const mutate = useCreateTask();
 
-export default function TaskForm({ onSuccess }: TaskFormProps) {
-  const { mutate, isPending } = useCreateTask(onSuccess);
-
-  const handleSubmit = (formData: FormData) => {
-    mutate({
-      text: formData.get("text") as string,
-    });
+  const handleClick = () => {
+    mutate({ text: text });
+    setText("");
   };
 
   return (
-    <form className={css.form} action={handleSubmit}>
-      <label className={css.label}>
-        Task text
-        <textarea name="text" className={css.input} rows={5}></textarea>
-      </label>
+    <div className={css["taskForm"]}>
+      <input
+        type="text"
+        className={css["input"]}
+        placeholder="New task"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
 
-      <button type="submit" className={css.button}>
-        {isPending ? "Creating new task..." : "Create"}
+      <button className={css["button"]} onClick={handleClick}>
+        Create Task
       </button>
-    </form>
+    </div>
   );
-}
+};
+
+export default TaskForm;

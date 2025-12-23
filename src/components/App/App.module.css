@@ -1,39 +1,39 @@
-.container {
-  max-width: 800px;
-  margin: 64px auto;
-  padding: 32px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-}
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
-.header {
+.app {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 56px 24px 72px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
+  flex-direction: column;
+  gap: 28px;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  color: #1d1f24;
 }
 
-.createButton {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #fff;
-  background-color: #0d6efd;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  white-space: nowrap;
+.app::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: radial-gradient(circle at top, #f8f1e8 0%, #f1f5f8 45%, #e9f0f4 100%);
 }
 
-.createButton:hover {
-  background-color: #0b5ed7;
+.app::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(600px 300px at 85% 10%, rgba(246, 209, 168, 0.5), transparent 60%),
+    radial-gradient(500px 320px at 10% 20%, rgba(186, 221, 223, 0.45), transparent 65%),
+    radial-gradient(380px 320px at 50% 85%, rgba(200, 210, 250, 0.3), transparent 70%);
+  filter: blur(0.5px);
 }
 
-.loading {
-  display: block;
-  font-size: 16px;
-  color: #495057;
-  margin-bottom: 16px;
+.app :global(h1) {
+  font-family: "Fraunces", "Georgia", serif;
 }

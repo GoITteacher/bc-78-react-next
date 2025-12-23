@@ -6,6 +6,8 @@ interface ModalProps {
   children: React.ReactNode;
 }
 
+const modalRootElem = document.querySelector("#modal-root") as HTMLDivElement;
+
 export default function Modal({ onClose, children }: ModalProps) {
   return createPortal(
     <div className={css.backdrop} role="dialog" aria-modal="true">
@@ -16,6 +18,6 @@ export default function Modal({ onClose, children }: ModalProps) {
         {children}
       </div>
     </div>,
-    document.getElementById("modal-root") as HTMLDivElement
+    modalRootElem
   );
 }

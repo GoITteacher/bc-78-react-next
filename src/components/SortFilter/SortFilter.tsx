@@ -6,9 +6,18 @@
  * 4. Додати значення сортування в queryKey
  */
 
+import { useState } from "react";
+
+type SortOrder = "asc" | "desc";
+
 export default function SortFilter() {
+  const [value, setValue] = useState<SortOrder>("asc");
+
   return (
-    <select>
+    <select
+      value={value}
+      onChange={(e) => setValue(e.target.value as SortOrder)}
+    >
       <option value="asc">Ascending</option>
       <option value="desc">Descending</option>
     </select>

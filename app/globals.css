@@ -40,3 +40,11 @@ a {
     color-scheme: dark;
   }
 }
+
+.light {
+  --primary-color: white;
+}
+
+.dark {
+  --primary-color: black;
+}

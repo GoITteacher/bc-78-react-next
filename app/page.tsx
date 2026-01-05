@@ -1,46 +1,17 @@
+import Section1 from "@/components/Section1/Section1";
 import styles from "./page.module.css";
+import Image from "next/image";
+import Section2 from "@/components/Section2/Section2";
+
+export const metadata = {
+  title: "Main Page",
+};
 
 export default function Home() {
   return (
     <main className={styles.page}>
-      <header>
-        <h1>Вступна теорія про Next.js для швидкого старту</h1>
-        <p>
-          Зрозумійте, як працює фреймворк: маршрутизація, рендеринг, компоненти
-          та базові принципи створення сучасних React-застосунків.
-        </p>
-        <div>
-          <button type="button">Почати навчання</button>
-          <button type="button">Переглянути приклади</button>
-        </div>
-      </header>
-
-      <section className={styles.howNext}>
-        <h2>Як влаштований Next.js</h2>
-        <ol>
-          <li>Проєкт будується на React, але має власну структуру.</li>
-          <li>Маршрути формуються з файлової системи.</li>
-          <li>Рендеринг обирається під задачу: SSR, SSG або CSR.</li>
-        </ol>
-      </section>
-
-      <section>
-        <h2>Ключові теми</h2>
-        <div>
-          <article>
-            <h3>Файлова маршрутизація</h3>
-            <p>Сторінки та сегменти визначаються структурою папок.</p>
-          </article>
-          <article>
-            <h3>Рендеринг і кеш</h3>
-            <p>Пояснення SSR, SSG, ISR та клієнтського рендерингу.</p>
-          </article>
-          <article>
-            <h3>Дані і запити</h3>
-            <p>Основи роботи з API, серверними діями та обробкою форм.</p>
-          </article>
-        </div>
-      </section>
+      <Section1 title="Hello" />
+      <Section2 />
 
       <section className={styles.whyNext}>
         <h2>Чому Next.js</h2>
@@ -57,7 +28,9 @@ export default function Home() {
         <div>
           <article>
             <h3>Основи</h3>
-            <img
+            <Image
+              width={300}
+              height={300}
               src="https://images.ctfassets.net/23aumh6u8s0i/c04wENP3FnbevwdWzrePs/1e2739fa6d0aa5192cf89599e009da4e/nextjs"
               alt=""
             />
@@ -67,9 +40,11 @@ export default function Home() {
           </article>
           <article>
             <h3>Рендеринг</h3>
-            <img
+            <Image
               src="https://images.ctfassets.net/23aumh6u8s0i/c04wENP3FnbevwdWzrePs/1e2739fa6d0aa5192cf89599e009da4e/nextjs"
               alt=""
+              width={300}
+              height={300}
             />
             <p>SSR, SSG, ISR, оптимізація даних і кеш.</p>
             <p>Тривалість: 3 год</p>
@@ -77,7 +52,9 @@ export default function Home() {
           </article>
           <article>
             <h3>Практика</h3>
-            <img
+            <Image
+              width={300}
+              height={300}
               src="https://images.ctfassets.net/23aumh6u8s0i/c04wENP3FnbevwdWzrePs/1e2739fa6d0aa5192cf89599e009da4e/nextjs"
               alt=""
             />

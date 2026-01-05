@@ -24,6 +24,7 @@ npm install -D prettier eslint-config-prettier
 - Серверна, клієнтська, гібридна
 - Файлова маршрутизація
 - Навігація із `next/link`
+- Робота з зображеннями
 - Що таке layout. Метадані.
 
 ```shell

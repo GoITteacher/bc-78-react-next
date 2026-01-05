@@ -1,6 +1,8 @@
+import styles from "./page.module.css";
+
 export default function Home() {
   return (
-    <main>
+    <main className={styles.page}>
       <header>
         <h1>Вступна теорія про Next.js для швидкого старту</h1>
         <p>
@@ -13,7 +15,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section>
+      <section className={styles.howNext}>
         <h2>Як влаштований Next.js</h2>
         <ol>
           <li>Проєкт будується на React, але має власну структуру.</li>
@@ -40,7 +42,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className={styles.whyNext}>
         <h2>Чому Next.js</h2>
         <ul>
           <li>Швидкі сторінки завдяки гібридному рендерингу.</li>
@@ -55,18 +57,30 @@ export default function Home() {
         <div>
           <article>
             <h3>Основи</h3>
+            <img
+              src="https://images.ctfassets.net/23aumh6u8s0i/c04wENP3FnbevwdWzrePs/1e2739fa6d0aa5192cf89599e009da4e/nextjs"
+              alt=""
+            />
             <p>Структура застосунку, App Router, layout та page.</p>
             <p>Тривалість: 2 год</p>
             <button type="button">Почати</button>
           </article>
           <article>
             <h3>Рендеринг</h3>
+            <img
+              src="https://images.ctfassets.net/23aumh6u8s0i/c04wENP3FnbevwdWzrePs/1e2739fa6d0aa5192cf89599e009da4e/nextjs"
+              alt=""
+            />
             <p>SSR, SSG, ISR, оптимізація даних і кеш.</p>
             <p>Тривалість: 3 год</p>
             <button type="button">Продовжити</button>
           </article>
           <article>
             <h3>Практика</h3>
+            <img
+              src="https://images.ctfassets.net/23aumh6u8s0i/c04wENP3FnbevwdWzrePs/1e2739fa6d0aa5192cf89599e009da4e/nextjs"
+              alt=""
+            />
             <p>Створення лендінгу, форм та інтеграцій API.</p>
             <p>Тривалість: 4 год</p>
             <button type="button">Перейти</button>

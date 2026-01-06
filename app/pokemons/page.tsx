@@ -1,5 +1,11 @@
+import SearchPokemon from "@/components/SearchPokemon/SearchPokemon";
+
 const Page = () => {
-  return <main>Page</main>;
+  return (
+    <main>
+      <SearchPokemon />
+    </main>
+  );
 };
 
 export default Page;

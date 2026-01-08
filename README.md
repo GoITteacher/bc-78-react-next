@@ -12,4 +12,4 @@
 
 - Вкладені layout
 
-https://otto-zimmermann.store/
+https://otto-zimmermann.store

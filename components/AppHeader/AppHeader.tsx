@@ -12,6 +12,9 @@ export default function AppHeader() {
           <Link href="/products">Products</Link>
         </li>
         <li>
+          <Link href="/dashboard">Dashboard</Link>
+        </li>
+        <li>
           <Link href="/recipes">Recipes</Link>
         </li>
         <li>

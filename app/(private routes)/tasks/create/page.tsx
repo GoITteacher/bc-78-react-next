@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../../forms/formLayout.module.css";
+import styles from "./formLayout.module.css";
 
 const statuses = ["todo", "in-progress", "done"];
 
@@ -9,14 +9,22 @@ export default function TaskCreatePage() {
     <div className={styles.page}>
       <main className={styles.card}>
         <div>
-          <p className={styles.description}>Create a task entry that mirrors /tasks payload.</p>
+          <p className={styles.description}>
+            Create a task entry that mirrors /tasks payload.
+          </p>
           <h1 className={styles.title}>New task</h1>
         </div>
 
         <form className={styles.form}>
           <label className={styles.label}>
             Title
-            <input className={styles.input} name="title" type="text" placeholder="Design auth flow" required />
+            <input
+              className={styles.input}
+              name="title"
+              type="text"
+              placeholder="Design auth flow"
+              required
+            />
           </label>
           <label className={styles.label}>
             Description

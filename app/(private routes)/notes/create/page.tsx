@@ -1,20 +1,28 @@
 "use client";
 
-import styles from "../../forms/formLayout.module.css";
+import styles from "./forms/formLayout.module.css";
 
 export default function NotesCreatePage() {
   return (
     <div className={styles.page}>
       <main className={styles.card}>
         <div>
-          <p className={styles.description}>Match the protected notes payload from the server.</p>
+          <p className={styles.description}>
+            Match the protected notes payload from the server.
+          </p>
           <h1 className={styles.title}>New note</h1>
         </div>
 
         <form className={styles.form}>
           <label className={styles.label}>
             Title
-            <input className={styles.input} name="title" type="text" placeholder="Client onboarding brief" required />
+            <input
+              className={styles.input}
+              name="title"
+              type="text"
+              placeholder="Client onboarding brief"
+              required
+            />
           </label>
           <label className={styles.label}>
             Content
@@ -27,7 +35,12 @@ export default function NotesCreatePage() {
           </label>
           <label className={styles.label}>
             Tags
-            <input className={styles.input} name="tags" type="text" placeholder="onboarding, client" />
+            <input
+              className={styles.input}
+              name="tags"
+              type="text"
+              placeholder="onboarding, client"
+            />
           </label>
           <label className={styles.label}>
             <span className={styles.checkboxRow}>

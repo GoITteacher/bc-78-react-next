@@ -1,42 +1,43 @@
 "use client";
 
-import { ApiError } from "@/app/api/api";
-import { login } from "@/lib/auth";
-import { useAuthStore } from "@/store/userStore";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import styles from "../authForm.module.css";
 
 export default function LoginPage() {
-  const [error, setError] = useState("");
-  const router = useRouter();
-  const setUser = useAuthStore((s) => s.setUser);
-
-  const handleSubmit = async (formData: FormData) => {
-    const email = formData.get("email") as string;
-    const password = formData.get("email") as string;
-    try {
-      const res = await login({ email, password });
-
-      if (res) {
-        setUser(res);
-        router.push("/");
-      } else {
-        setError("Invalid email or password");
-      }
-    } catch {
-      setError("Invalid email or password");
-    }
-  };
-
   return (
-    <div>
-      <h1>Sign In</h1>
-      <form action={handleSubmit}>
-        <input type="email" name="email" placeholder="test@gmail.com" />
-        <input type="password" name="password" placeholder="password" />
-        <button type="submit">Login</button>
-        {error && <p>{error}</p>}
-      </form>
+    <div className={styles.page}>
+      <main className={styles.card}>
+        <div>
+          <p className={styles.overline}>Welcome back</p>
+          <h1 className={styles.title}>Sign in</h1>
+          <p className={styles.description}>
+            Enter the credentials you used when registering.
+          </p>
+        </div>
+
+        <form className={styles.form}>
+          <label className={styles.label}>
+            Email
+            <input
+              className={styles.input}
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+            />
+          </label>
+          <label className={styles.label}>
+            Password
+            <input
+              className={styles.input}
+              type="password"
+              name="password"
+              placeholder="••••••••"
+            />
+          </label>
+          <button className={styles.button} type="submit">
+            Login
+          </button>
+        </form>
+      </main>
     </div>
   );
 }

@@ -2,12 +2,14 @@
 
 import Link from "next/link";
 import css from "./AppHeader.module.css";
-import { selectChangeLang, selectLang, useLangStore } from "@/stores/langStore";
+import { useEffect } from "react";
 
 export default function AppHeader() {
-  const lang = useLangStore(selectLang);
-  const changeLang = useLangStore(selectChangeLang);
-
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+  }, []);
   return (
     <header className={css.header}>
       <ul className={css.nav}>
@@ -21,15 +23,6 @@ export default function AppHeader() {
           <Link href="/bucket">Bucket</Link>
         </li>
       </ul>
-      <select
-        name="lang"
-        value={lang}
-        onChange={(e) => changeLang(e.target.value)}
-      >
-        <option value="en">En</option>
-        <option value="ua">Ua</option>
-        <option value="pl">Pl</option>
-      </select>
     </header>
   );
 }

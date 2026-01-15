@@ -1,8 +1,6 @@
+import axios from "axios";
 
-import axios, { AxiosError } from "axios";
-
-export const globalApi = axios.create({
-    baseURL: 'https://62584f320c918296a49543e7.mockapi.io'
-})
-
-export type ApiError = AxiosError<{error: string}>;
+export const globalApiConfig = axios.create({
+  baseURL: "http://localhost:3001",
+  withCredentials: true,
+});

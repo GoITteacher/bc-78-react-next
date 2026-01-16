@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../authForm.module.css";
+import styles from "./authForm.module.css";
 
 export default function SignUp() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./forms/formLayout.module.css";
+import styles from "./formLayout.module.css";
 
 const newsTypes = ["updates", "news", "testimonials", "video stories"];
 const accountTypes = ["freeUser", "paidUser", "agencyUser"];

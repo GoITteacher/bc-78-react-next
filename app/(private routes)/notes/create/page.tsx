@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./forms/formLayout.module.css";
+import styles from "./formLayout.module.css";
 
 export default function NotesCreatePage() {
   return (

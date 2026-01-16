@@ -4,6 +4,7 @@ import AppHeader from "@/components/AppHeader/AppHeader";
 import TanStackProvider from "@/components/TanStackProvider";
 import "./globals.css";
 import styles from "./layout.module.css";
+import AuthProvider from "@/components/providers/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,8 +49,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${styles.body}`}
       >
         <TanStackProvider>
-          <AppHeader />
-          <div className={styles.pageFrame}>{children}</div>
+          <AuthProvider>
+            <AppHeader />
+            <div>TEST</div>
+            <div className={styles.pageFrame}>{children}</div>
+          </AuthProvider>
         </TanStackProvider>
       </body>
     </html>
